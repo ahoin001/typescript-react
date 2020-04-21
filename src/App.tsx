@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoList from './components/TodoList';
+import NewTask from './components/NewTask';
 
 
 // ? React Type provided by react
@@ -10,7 +11,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
 
-      {/* Component That Adds Tasks */}
+      <NewTask/>
 
       <TodoList items={todos}/>
     
