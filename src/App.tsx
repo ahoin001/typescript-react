@@ -22,16 +22,25 @@ const App: React.FC = () => {
       ])
   }
 
+  const deleteTaskHandler = (todoId: string) => {
+    
+    setTodos( (prevTodos) => {
 
+      return prevTodos.filter(todo => todo.id !== todoId)
+
+    })
+
+  }
+  
 
   return (
-    <div className="App">
+    <React.Fragment>
 
       <NewTask addTask={addTaskHandler} />
 
-      <TodoList items={todos} />
+      <TodoList items={todos} deleteTask={deleteTaskHandler}/>
 
-    </div>
+    </React.Fragment>
   );
 
 }
